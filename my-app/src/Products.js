@@ -35,18 +35,18 @@ class ProductCategoryRow extends Component {
       const electro = [];
 
       this.props.products.forEach((product) => {
-          /*if (product.name.toLowerCase().indexOf(filterText.toLowerCase()) === -1) {
+          if (product.name.toLowerCase().indexOf(filterText.toLowerCase()) === -1) {
             return;
-          }*/
+          }
           if (stockOnly && !product.stocked) {
               return;
           }
-          if (product.category == 'Sporting Goods') {
+          if (product.category === 'Sporting Goods') {
               sport.push(
                   <ProdList product={product} key={product.name} />
               );
           }
-          if (product.category == 'Electronics') {
+          if (product.category === 'Electronics') {
               electro.push(
                   <ProdList product={product} key={product.name} />
               );
