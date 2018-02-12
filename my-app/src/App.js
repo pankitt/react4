@@ -21,7 +21,7 @@ class App extends Component {
   render() {
     return (
         <section>
-          <Products products={PRODUCTS} />
+            <Products products={PRODUCTS} />
         </section>
     );
   }
