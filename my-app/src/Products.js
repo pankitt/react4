@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 
 
 class ProdList extends Component {
-  constructor(props) {
-      super(props);
-  }
 
   render() {
     const product = this.props.product;
@@ -24,9 +21,6 @@ class ProdList extends Component {
 }
 
 class ProductCategoryRow extends Component {
-  constructor(props) {
-      super(props);
-  }
 
   render() {
       const stockOnly = this.props.stockOnly;
@@ -70,9 +64,6 @@ class ProductCategoryRow extends Component {
 }
 
 class ProductTable extends Component {
-  constructor(props) {
-      super(props);
-  }
 
   render() {
       return (
@@ -154,7 +145,7 @@ class FilterableProductTable extends Component {
     })
   }
 
-  showStatus(e) {
+  showStatus() {
      console.log(`${this.state.filterText} - ${this.state.stockOnly}`);
   }
 
