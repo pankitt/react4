@@ -24,3 +24,8 @@ a {
         padding:10px;
         border:1px solid #333;
     }
+    .logo {
+        padding:0;
+        width:40px;
+        vertical-align:middle;
+    }
