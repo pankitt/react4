@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './index.css';
-import Header from '../../components/Header/index';
-import FilterableProductTable from '../../components/FilterableProductTable/index';
+import Header from 'components/Header/index';
+import FilterableProductTable from 'components/FilterableProductTable/index';
 
 const menu = [
     {link: '/news', label: 'News'},
