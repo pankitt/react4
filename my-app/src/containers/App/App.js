@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Products from './Products';
+import FilterableProductTable from '../../components/FilterableProductTable/index';
 
 const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
@@ -21,7 +21,7 @@ class App extends Component {
   render() {
     return (
         <section>
-            <Products products={PRODUCTS} />
+            <FilterableProductTable products={PRODUCTS} />
         </section>
     );
   }
