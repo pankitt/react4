@@ -14,3 +14,13 @@ td {
     width:150px;
     padding:2px 10px;
 }
+a {
+    text-decoration:none;
+}
+.header {
+    margin:30px 0;
+}
+    .header a {
+        padding:10px;
+        border:1px solid #333;
+    }

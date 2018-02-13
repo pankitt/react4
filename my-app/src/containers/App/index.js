@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import './index.css';
+import Header from '../../components/Header/index';
 import FilterableProductTable from '../../components/FilterableProductTable/index';
 
+const menu = [
+    {link: '/news', label: 'News'},
+    {link: '/products', label: 'Products'},
+    {link: '/contacts', label: 'Contacts'},
+];
 const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
     {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
@@ -21,6 +27,7 @@ class App extends Component {
   render() {
     return (
         <section>
+            <Header items={menu}/>
             <FilterableProductTable products={PRODUCTS} />
         </section>
     );
