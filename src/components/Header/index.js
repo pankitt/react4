@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import logo from 'assets/logo.svg';
 
 class Header extends Component {
@@ -6,10 +7,10 @@ class Header extends Component {
     render() {
         return (
             <header className='header'>
-                <a href='/'><img src={logo} alt='logo' className='logo' /></a>
+                <Link to='/'><img src={logo} alt='logo' className='logo' /></Link>
 
                 {this.props.items.map((item, index) =>
-                    <a href={item.link} key={index}>{item.label}</a>
+                    <Link to={item.link} key={index}>{item.label}</Link>
                 )}
             </header>
         );
