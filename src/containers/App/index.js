@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './index.css';
-import Header from 'components/Header/index';
-import Main from 'containers/Main/index';
+import Header from 'components/Header';
+import Main from 'containers/Main';
 
 const menu = [
     {link: '/products', label: 'Products'},

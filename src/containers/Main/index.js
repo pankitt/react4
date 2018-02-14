@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Home from 'components/Home/index';
-import ProductsAll from 'components/ProductsAll/index';
+import Home from 'components/Home';
+import ProductsAll from 'components/ProductsAll';
 import ProductName from 'components/ProductName';
-import Contacts from 'components/Contacts/index';
+import Contacts from 'components/Contacts';
 
 class Main extends Component {
 

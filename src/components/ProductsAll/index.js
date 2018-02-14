@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FilterableProductTable from 'components/FilterableProductTable/index';
+import FilterableProductTable from 'components/FilterableProductTable';
 
 class ProductsAll extends Component {
 
