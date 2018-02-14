@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class ProdList extends Component {
 
@@ -12,7 +13,7 @@ class ProdList extends Component {
 
     return (
       <tr>
-        <td>{name}</td>
+        <td><Link to={`/products/${product.number}`}>{name}</Link></td>
         <td>{product.price}</td>
       </tr>
     )

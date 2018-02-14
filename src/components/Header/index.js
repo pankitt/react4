@@ -13,6 +13,7 @@ class Header extends Component {
                     <Link to={item.link} key={index}>{item.label}</Link>
                 )}
             </header>
+
         );
     }
 }
