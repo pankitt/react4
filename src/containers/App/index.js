@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './index.css';
 import Header from 'components/Header/index';
+import Main from 'containers/Main/index';
 import FilterableProductTable from 'components/FilterableProductTable/index';
 
 const menu = [
-    {link: '/news', label: 'News'},
     {link: '/products', label: 'Products'},
     {link: '/contacts', label: 'Contacts'},
 ];
@@ -28,6 +28,7 @@ class App extends Component {
     return (
         <section>
             <Header items={menu}/>
+            <Main/>
             <FilterableProductTable products={PRODUCTS} />
         </section>
     );
