@@ -33,7 +33,7 @@ class App extends Component {
 
     componentWillMount() {
         const root = 'http://localhost:3004';
-        const header = new Headers({
+        const header = new Header({
             'Content-Type': 'application/json'
         });
         const request = new Request(
