@@ -24,6 +24,9 @@ a {
         padding:10px;
         border:1px solid #333;
     }
+    .header .active {
+        background:#ccc;
+    }
     .logo {
         padding:0;
         width:40px;

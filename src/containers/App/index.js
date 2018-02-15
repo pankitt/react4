@@ -3,7 +3,7 @@ import './index.css';
 import Header from 'components/Header';
 import Main from 'containers/Main';
 
-const menu = [
+const MENU = [
     {link: '/products', label: 'Products'},
     {link: '/contacts', label: 'Contacts'},
 ];
@@ -24,14 +24,41 @@ const PRODUCTS = [
 
 
 class App extends Component {
-  render() {
-    return (
-        <section>
-            <Header items={menu}/>
-            <Main products={PRODUCTS} />
-        </section>
-    );
-  }
+    constructor(props) {
+        super(props);
+        this.state = {
+           products: []
+        }
+    }
+
+    componentWillMount() {
+        const root = 'http://localhost:3004';
+        const header = new Headers({
+            'Content-Type': 'application/json'
+        });
+        const request = new Request(
+            `${root}/products`,
+            {
+                method: 'GET',
+                headers: header
+            }
+        );
+        fetch(request)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                this.setState({ products: data })
+            })
+    }
+
+    render() {
+        return (
+            <section>
+                <Header items={MENU} />
+                <Main products={PRODUCTS} />
+            </section>
+        );
+    }
 }
 
 export default App;
