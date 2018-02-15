@@ -20,13 +20,14 @@ a {
 .header {
     margin:30px 0;
 }
-    .header a {
-        padding:10px;
-        border:1px solid #333;
+    .header nav {
+        display:inline-block;
+        margin:0 auto;
     }
-    .header .active {
-        background:#ccc;
-    }
+        .header nav a {
+            padding:10px;
+            border:1px solid #333;
+        }
     .logo {
         padding:0;
         width:40px;

@@ -12,9 +12,5 @@
     {"number":9, "category": "Electronics", "price": "$299.99", "stocked": true, "name": "Samsung"},
     {"number":10, "category": "Electronics", "price": "$199.99", "stocked": true, "name": "LG"},
     {"number":11, "category": "Electronics", "price": "$359.99", "stocked": true, "name": "Sony"}
-  ],
-  "MENU" : [
-    {"link": "/products", "label": "Products"},
-    {"link": "/contacts", "label": "Contacts"}
   ]
 }

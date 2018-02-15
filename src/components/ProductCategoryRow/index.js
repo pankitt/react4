@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
 import ProdList from 'components/ProdList';
-import {
-  TableBody,
-  TableRow,
-  TableRowColumn,
-} from 'material-ui/Table';
 
 class ProductCategoryRow extends Component {
 
@@ -35,16 +30,16 @@ class ProductCategoryRow extends Component {
 
 
       return (
-          <TableBody>
-            <TableRow>
-              <TableRowColumn colSpan="2"><b>Sporting Goods</b></TableRowColumn>
-            </TableRow>
+          <tbody>
+            <tr>
+              <td colSpan="2"><b>Sporting Goods</b></td>
+            </tr>
             {sport}
-            <TableRow>
-              <TableRowColumn colSpan="2"><b>Electronics</b></TableRowColumn>
-            </TableRow>
+            <tr>
+              <td colSpan="2"><b>Electronics</b></td>
+            </tr>
             {electro}
-          </TableBody>
+          </tbody>
       )
   }
 }

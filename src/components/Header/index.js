@@ -8,10 +8,11 @@ class Header extends Component {
         return (
             <header className='header'>
                 <Link to='/'><img src={logo} alt='logo' className='logo' /></Link>
-
-                {this.props.items.map((item, index) =>
-                    <Link to={item.link} key={index}>{item.label}</Link>
-                )}
+                <nav>
+                    {this.props.items.map((item, index) =>
+                        <Link to={item.link} key={index}>{item.label}</Link>
+                    )}
+                </nav>
             </header>
 
         );
