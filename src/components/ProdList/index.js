@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import {
+  TableRow,
+  TableRowColumn,
+} from 'material-ui/Table';
 
 class ProdList extends Component {
 
@@ -12,10 +16,10 @@ class ProdList extends Component {
         </span>;
 
     return (
-      <tr>
-        <td><Link to={`/products/${product.number}`}>{name}</Link></td>
-        <td>{product.price}</td>
-      </tr>
+      <TableRow>
+        <TableRowColumn><Link to={`/products/${product.number}`}>{name}</Link></TableRowColumn>
+        <TableRowColumn>{product.price}</TableRowColumn>
+      </TableRow>
     )
   }
 }
