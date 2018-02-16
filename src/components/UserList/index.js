@@ -10,9 +10,9 @@ import {
 } from 'material-ui/Table';
 
 
-class TableProduct extends Component {
+class TableUsers extends Component {
     render(){
-        const product = this.props.product;
+        const users = this.props.users;
 
         return (
              <Table selectable={false}>
@@ -20,19 +20,17 @@ class TableProduct extends Component {
                   <TableRow>
                     <TableHeaderColumn>№</TableHeaderColumn>
                     <TableHeaderColumn>Name</TableHeaderColumn>
-                    <TableHeaderColumn>Category</TableHeaderColumn>
-                    <TableHeaderColumn>Price</TableHeaderColumn>
+                    <TableHeaderColumn>Email</TableHeaderColumn>
                   </TableRow>
                 </TableHeader>
                 <TableBody displayRowCheckbox={false}>
-                    {product.map((item, index) =>
+                    {users.map((item, index) =>
                       <TableRow key={index}>
                         <TableRowColumn>{index + 1}</TableRowColumn>
                         <TableRowColumn>
-                            <Link to={`/products/${item.id}`}>{item.name}</Link>
+                            <Link to={`/users/${item.id}`}>{item.name}</Link>
                         </TableRowColumn>
-                        <TableRowColumn>{item.category}</TableRowColumn>
-                        <TableRowColumn>{item.price}</TableRowColumn>
+                        <TableRowColumn>{item.email}</TableRowColumn>
                       </TableRow>
                     )}
                 </TableBody>
@@ -41,18 +39,17 @@ class TableProduct extends Component {
     }
 }
 
-class Home extends Component {
-
+class UserList extends Component {
     render() {
-        const product = this.props.products;
-
+        const users = this.props.users;
+        
         return (
             <section>
-                <h3>Home</h3>
-                <TableProduct product={product} />
+                <h3>Users</h3>
+                <TableUsers users={users} />
             </section>
         );
     }
 }
 
-export default Home;
+export default UserList;

@@ -6,7 +6,7 @@ class ProductsAll extends Component {
     render() {
         return (
             <section>
-                <h3>Products:</h3>
+                <h3>Products</h3>
                 <FilterableProductTable products={this.props.products} />
             </section>
         );

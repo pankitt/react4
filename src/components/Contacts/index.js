@@ -14,7 +14,8 @@ class Contacts extends Component {
                     <li><a href="https://reacttraining.com/react-router/web/example/basic">React Training / React Router</a></li>
                     <li><a href="https://semantic-ui.com/introduction/getting-started.html">semantic-ui</a></li>
                     <li><a href="http://www.material-ui.com/#/components/table">material-ui</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=BS7fRPWmNZo&index=1&list=PLIcAMDxr6tprSzqKmfhDiW00GWbDcs8lE">Redux Video</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCY10FZglXJ8RL3xB04VpykQ/playlists">Video 1</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCyUFMVZ6VnbB5a8d_EyrFBQ/playlists">Video 2</a></li>
                     <li><a href="https://maxfarseer.gitbooks.io/redux-course-ru/content/osnovi_redux.html">Основы Redux (теория)</a></li>
                     <li><a href="https://redux.js.org/">Redux</a></li>
                 </ul>
