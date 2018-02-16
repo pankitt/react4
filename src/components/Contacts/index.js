@@ -7,6 +7,7 @@ class Contacts extends Component {
             <section>
                 <h3>Contacts</h3>
                 <ul>
+                    <li><a href="https://blog.bitsrc.io/11-react-component-libraries-you-should-know-178eb1dd6aa4">React Libraries 2018</a></li>
                     <li><a href="https://drive.google.com/drive/u/0/folders/0B1llL225yBwBT2NWS0ZNOExoQU0">Google Drive</a></li>
                     <li><a href="https://reactjs.org/docs/jsx-in-depth.html">Advanced Guides</a></li>
                     <li><a href="https://maxfarseer.gitbooks.io/react-router-course-ru/content/">Роутинг в react-приложениях</a></li>
