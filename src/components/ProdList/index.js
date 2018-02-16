@@ -13,7 +13,7 @@ class ProdList extends Component {
 
     return (
       <tr>
-        <td><Link to={`/products/${product.number}`}>{name}</Link></td>
+        <td><Link to={`/products/${product.id}`}>{name}</Link></td>
         <td>{product.price}</td>
       </tr>
     )

@@ -1,16 +1,16 @@
 {
   "PRODUCTS" : [
-    {"number":0, "category": "Sporting Goods", "price": "$49.99", "stocked": true, "name": "Football"},
-    {"number":1, "category": "Sporting Goods", "price": "$9.99", "stocked": true, "name": "Baseball"},
-    {"number":2, "category": "Sporting Goods", "price": "$29.99", "stocked": false, "name": "Basketball"},
-    {"number":3, "category": "Sporting Goods", "price": "$20.99", "stocked": false, "name": "Hockey"},
-    {"number":4, "category": "Sporting Goods", "price": "$1.99", "stocked": false, "name": "Rugby"},
-    {"number":5, "category": "Sporting Goods", "price": "$49.99", "stocked": false, "name": "Am. Football"},
-    {"number":6, "category": "Electronics", "price": "$99.99", "stocked": true, "name": "iPod"},
-    {"number":7, "category": "Electronics", "price": "$399.99", "stocked": false, "name": "iPhone"},
-    {"number":8, "category": "Electronics", "price": "$199.99", "stocked": true, "name": "Nexus"},
-    {"number":9, "category": "Electronics", "price": "$299.99", "stocked": true, "name": "Samsung"},
-    {"number":10, "category": "Electronics", "price": "$199.99", "stocked": true, "name": "LG"},
-    {"number":11, "category": "Electronics", "price": "$359.99", "stocked": true, "name": "Sony"}
+    {"id":0, "category": "Sporting Goods", "price": "$49.99", "stocked": true, "name": "Football"},
+    {"id":1, "category": "Sporting Goods", "price": "$9.99", "stocked": true, "name": "Baseball"},
+    {"id":2, "category": "Sporting Goods", "price": "$29.99", "stocked": false, "name": "Basketball"},
+    {"id":3, "category": "Sporting Goods", "price": "$20.99", "stocked": false, "name": "Hockey"},
+    {"id":4, "category": "Sporting Goods", "price": "$1.99", "stocked": false, "name": "Rugby"},
+    {"id":5, "category": "Sporting Goods", "price": "$49.99", "stocked": false, "name": "Am. Football"},
+    {"id":6, "category": "Electronics", "price": "$99.99", "stocked": true, "name": "iPod"},
+    {"id":7, "category": "Electronics", "price": "$399.99", "stocked": false, "name": "iPhone"},
+    {"id":8, "category": "Electronics", "price": "$199.99", "stocked": true, "name": "Nexus"},
+    {"id":9, "category": "Electronics", "price": "$299.99", "stocked": true, "name": "Samsung"},
+    {"id":10, "category": "Electronics", "price": "$199.99", "stocked": true, "name": "LG"},
+    {"id":11, "category": "Electronics", "price": "$359.99", "stocked": true, "name": "Sony"}
   ]
 }

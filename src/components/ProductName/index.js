@@ -7,7 +7,7 @@ class ProductName extends Component {
         const num = this.props.obj.match.params.number;
         const products = this.props.products;
         // const item = products[num];
-        const find = id => products.find(p => p.number === Number(id));
+        const find = id => products.find(p => p.id === Number(id));
         const item = find(num);
 
         if (!item) return <div>Product not found</div>;

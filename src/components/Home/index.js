@@ -25,12 +25,12 @@ class TableProduct extends Component {
                     <TableHeaderColumn>Price</TableHeaderColumn>
                   </TableRow>
                 </TableHeader>
-                <TableBody stripedRows={true} displayRowCheckbox={false}>
+                <TableBody displayRowCheckbox={false}>
                     {product.map((item, index) =>
                       <TableRow key={index}>
                         <TableRowColumn>{index + 1}</TableRowColumn>
                         <TableRowColumn>
-                            <Link to={`/products/${item.number}`}>{item.name}</Link>
+                            <Link to={`/products/${item.id}`}>{item.name}</Link>
                             <Route path='/products/:number' render={(obj) => <ProductName products={product} obj={obj} />} />
                         </TableRowColumn>
                         <TableRowColumn>{item.category}</TableRowColumn>
