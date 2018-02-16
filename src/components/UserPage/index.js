@@ -1,5 +1,30 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import {Card, CardActions, CardHeader, CardTitle} from 'material-ui/Card';
+import FlatButton from 'material-ui/FlatButton';
+
+
+class UserCard extends Component {
+    render() {
+        const user = this.props.user;
+        const back = <Link to='/users'>Back</Link>;
+
+        return (
+            <Card>
+                <CardHeader
+                  title={user.username}
+                  subtitle={user.email}
+                  avatar="http://dnevniki-vampira.org/templates/tv_horror/dleimages/noavatar.png"
+                />
+                <CardTitle title={user.name} subtitle={user.phone} />
+                <CardActions>
+                  <FlatButton label={back} />
+                </CardActions>
+            </Card>
+        )
+    }
+
+}
 
 
 class UserPage extends Component {
@@ -27,23 +52,19 @@ class UserPage extends Component {
         fetch(request)
             .then(response => response.json())
             .then(data => {
-                console.log('userName', data);
+                //console.log('userName', data);
                 this.setState({ userName: data })
             });
     }
 
     render() {
-        const item = this.state.userName;
+        const user = this.state.userName;
 
-        if (!item) return <div>User not found</div>;
+        if (!user) return <div>User not found</div>;
         return (
             <section>
                 <h3>User Name:</h3>
-
-                <div>
-                  <p>{item.name} - {item.email}</p>
-                  <p><Link to='/users'>Back</Link></p>
-                </div>
+                <UserCard user={user} />
             </section>
         );
     }

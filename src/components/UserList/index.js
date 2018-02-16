@@ -28,7 +28,7 @@ class TableUsers extends Component {
                       <TableRow key={index}>
                         <TableRowColumn>{index + 1}</TableRowColumn>
                         <TableRowColumn>
-                            <Link to={`/users/${item.id}`}>{item.name}</Link>
+                            <Link to={`/users/${item.id}`}>{item.username}</Link>
                         </TableRowColumn>
                         <TableRowColumn>{item.email}</TableRowColumn>
                       </TableRow>
