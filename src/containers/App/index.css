@@ -25,6 +25,7 @@ a {
         margin-top:15px;
     }
         .header nav a {
+            color:#fff;
             padding:10px;
         }
         .header nav .active {
