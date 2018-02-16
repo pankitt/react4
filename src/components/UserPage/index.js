@@ -1,13 +1,39 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+
 class UserPage extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+           userName: []
+        };
+        this.login = this.props.obj.match.params.number;
+    }
+
+    componentWillMount() {
+        const root = 'https://jsonplaceholder.typicode.com/users/' + this.login;
+        const headers = new Headers({
+            'Content-Type': 'application/json'
+        });
+        const request = new Request(
+            `${root}`,
+            {
+                method: 'GET',
+                headers: headers
+            }
+        );
+
+        fetch(request)
+            .then(response => response.json())
+            .then(data => {
+                console.log('userName', data);
+                this.setState({ userName: data })
+            });
+    }
 
     render() {
-        const num = this.props.obj.match.params.number;
-        const users = this.props.users;
-        const find = id => users.find(p => p.id === Number(id));
-        const item = find(num);
+        const item = this.state.userName;
 
         if (!item) return <div>User not found</div>;
         return (
