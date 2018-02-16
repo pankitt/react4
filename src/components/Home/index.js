@@ -14,14 +14,10 @@ import ProductName from 'components/ProductName';
 class TableProduct extends Component {
     render(){
         const product = this.props.product;
-        const style = {
-            showCheckboxes: false,
-            selectable: false
-        };
 
         return (
-             <Table>
-                <TableHeader>
+             <Table selectable={false}>
+                <TableHeader displaySelectAll={false}>
                   <TableRow>
                     <TableHeaderColumn>№</TableHeaderColumn>
                     <TableHeaderColumn>Name</TableHeaderColumn>
@@ -29,7 +25,7 @@ class TableProduct extends Component {
                     <TableHeaderColumn>Price</TableHeaderColumn>
                   </TableRow>
                 </TableHeader>
-                <TableBody stripedRows={true} showRowHover={true}>
+                <TableBody stripedRows={true} displayRowCheckbox={false}>
                     {product.map((item, index) =>
                       <TableRow key={index}>
                         <TableRowColumn>{index + 1}</TableRowColumn>
