@@ -11,7 +11,7 @@ class Main extends Component {
         return (
             <main>
                 <Switch>
-                  <Route exact path='/' component={Home} />
+                  <Route exact path='/' render={() => <Home products={this.props.products} />} />
                   <Route exact path='/products' render={() => <ProductsAll products={this.props.products} />} />
                   <Route path='/products/:number' render={(obj) => <ProductName products={this.props.products} obj={obj} />} />
                   <Route path='/contacts' component={Contacts} />

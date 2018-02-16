@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route, Link } from 'react-router-dom';
 import {
   Table,
   TableBody,
@@ -7,33 +8,56 @@ import {
   TableRow,
   TableRowColumn,
 } from 'material-ui/Table';
+import ProductName from 'components/ProductName';
 
-const TableExampleSimple = () => (
-  <Table>
-    <TableHeader>
-      <TableRow>
-        <TableHeaderColumn>ID</TableHeaderColumn>
-        <TableHeaderColumn>Name</TableHeaderColumn>
-        <TableHeaderColumn>Status</TableHeaderColumn>
-      </TableRow>
-    </TableHeader>
-    <TableBody>
-      <TableRow>
-        <TableRowColumn>1</TableRowColumn>
-        <TableRowColumn>John Smith</TableRowColumn>
-        <TableRowColumn>Employed</TableRowColumn>
-      </TableRow>
-    </TableBody>
-  </Table>
-);
+
+class TableProduct extends Component {
+    render(){
+        const product = this.props.product;
+        const style = {
+            stripedRows: true,
+            showRowHover: true,
+            showCheckboxes: false,
+            selectable: false
+        };
+
+        return (
+             <Table style={style}>
+                <TableHeader>
+                  <TableRow>
+                    <TableHeaderColumn>№</TableHeaderColumn>
+                    <TableHeaderColumn>Name</TableHeaderColumn>
+                    <TableHeaderColumn>Category</TableHeaderColumn>
+                    <TableHeaderColumn>Price</TableHeaderColumn>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                    {product.map((item, index) =>
+                      <TableRow key={index}>
+                        <TableRowColumn>{index + 1}</TableRowColumn>
+                        <TableRowColumn>
+                            <Link to={`/products/${item.number}`}>{item.name}</Link>
+                            <Route path='/products/:number' render={(obj) => <ProductName products={product} obj={obj} />} />
+                        </TableRowColumn>
+                        <TableRowColumn>{item.category}</TableRowColumn>
+                        <TableRowColumn>{item.price}</TableRowColumn>
+                      </TableRow>
+                    )}
+                </TableBody>
+             </Table>
+        )
+    }
+}
 
 class Home extends Component {
 
     render() {
+        const product = this.props.products;
+
         return (
             <section>
                 <h3>Home</h3>
-                <TableExampleSimple />
+                <TableProduct product={product} />
             </section>
         );
     }
