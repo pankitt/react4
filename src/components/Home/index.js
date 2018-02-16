@@ -15,14 +15,12 @@ class TableProduct extends Component {
     render(){
         const product = this.props.product;
         const style = {
-            stripedRows: true,
-            showRowHover: true,
             showCheckboxes: false,
             selectable: false
         };
 
         return (
-             <Table style={style}>
+             <Table>
                 <TableHeader>
                   <TableRow>
                     <TableHeaderColumn>№</TableHeaderColumn>
@@ -31,7 +29,7 @@ class TableProduct extends Component {
                     <TableHeaderColumn>Price</TableHeaderColumn>
                   </TableRow>
                 </TableHeader>
-                <TableBody>
+                <TableBody stripedRows={true} showRowHover={true}>
                     {product.map((item, index) =>
                       <TableRow key={index}>
                         <TableRowColumn>{index + 1}</TableRowColumn>

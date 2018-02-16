@@ -22,17 +22,16 @@ a {
 }
     .header nav {
         display:inline-block;
-        margin:0 auto;
+        margin-top:15px;
     }
         .header nav a {
             padding:10px;
-            border:1px solid #333;
         }
         .header nav .active {
-            background:#eee;
+            text-decoration:underline;
         }
     .logo {
         padding:0;
-        width:40px;
+        width:70px;
         vertical-align:middle;
     }
