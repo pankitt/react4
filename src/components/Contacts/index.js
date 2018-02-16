@@ -9,6 +9,7 @@ class Contacts extends Component {
                 <ul>
                     <li><a href="https://drive.google.com/drive/u/0/folders/0B1llL225yBwBT2NWS0ZNOExoQU0">Google Drive</a></li>
                     <li><a href="https://reactjs.org/docs/jsx-in-depth.html">Advanced Guides</a></li>
+                    <li><a href="https://maxfarseer.gitbooks.io/react-router-course-ru/content/">Роутинг в react-приложениях</a></li>
                     <li><a href="http://prgssr.ru/development/pogruzhenie-v-react-router.html">Погружение в React: роутер</a></li>
                     <li><a href="https://reacttraining.com/react-router/web/example/basic">React Training / React Router</a></li>
                     <li><a href="http://www.material-ui.com/#/components/table">material-ui</a></li>

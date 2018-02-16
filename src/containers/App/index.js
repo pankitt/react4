@@ -34,7 +34,7 @@ class App extends Component {
         fetch(request)
             .then(response => response.json())
             .then(data => {
-                console.log('products', data);
+                //console.log('products', data);
                 this.setState({ products: data })
             });
         /*fetch('http://localhost:3004/menu')
